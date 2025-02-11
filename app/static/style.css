@@ -1,0 +1,111 @@
+/* style.css */
+
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Header styling */
+header {
+    background-color: #343a40;
+    color: white;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Container for the main content */
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Styling for navigation links */
+nav a {
+    color: #343a40;
+    font-weight: bold;
+    margin: 0 1rem;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form input[type="text"],
+form input[type="email"],
+form button {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Flash message styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+ul li {
+    background-color: #28a745;
+    color: white;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    nav a {
+        margin: 0 0.5rem;
+    }
+}

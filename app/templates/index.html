@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition Attendance System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Face Recognition Attendance System</h1>
+    </header>
+    <nav>
+        <a href="{{ url_for('main.index') }}">Home</a>
+        <a href="{{ url_for('main.register') }}">Register</a>
+        <a href="{{ url_for('main.capture_attendance') }}">Capture Attendance</a>
+        <a href="{{ url_for('main.attendance_records') }}">View Attendance Records</a>
+    </nav>
+    <div class="container">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        <!-- Page-specific content goes here -->
+    </div>
+</body>
+</html>
