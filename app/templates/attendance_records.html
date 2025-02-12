@@ -4,9 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attendance Records</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Attendance Records</h1>
-    <!-- Code to display attendance records -->
+    <header>
+        <h1>Attendance Records</h1>
+    </header>
+
+    <nav>
+        <a href="{{ url_for('main.index') }}">Home</a>
+        <a href="{{ url_for('main.register') }}">Register</a>
+        <a href="{{ url_for('main.capture_attendance') }}">Capture Attendance</a>
+        <a href="{{ url_for('main.view_attendance_records') }}">View Attendance Records</a>
+    </nav>
+
+    <div class="container">
+        {% if attendance_data %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Roll Number</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for record in attendance_data %}
+                        <tr>
+                            <td>{{ record.name }}</td>
+                            <td>{{ record.rollNumber }}</td>
+                            <td>{{ record.date }}</td>
+                            <td>{{ record.time }}</td>
+                            <td>{{ record.status }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>No attendance records found.</p>
+        {% endif %}
+    </div>
 </body>
 </html>

@@ -4,17 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}">
 </head>
 <body>
-    <h1>Register</h1>
-    <form method="post" action="{{ url_for('main.register') }}">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br>
-        <label for="rollNumber">Roll Number:</label>
-        <input type="text" id="rollNumber" name="rollNumber" required><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br>
-        <button type="submit">Submit</button>
-    </form>
+    <header>
+        <h1>Register</h1>
+    </header>
+
+    <nav>
+        <a href="{{ url_for('main.index') }}">Home</a>
+        <a href="{{ url_for('main.register') }}">Register</a>
+        <a href="{{ url_for('main.capture_attendance') }}">Capture Attendance</a>
+        <a href="{{ url_for('main.view_attendance_records') }}">View Attendance Records</a>
+    </nav>
+
+    <div class="container">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        <form method="post" action="{{ url_for('main.register') }}">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="rollNumber">Roll Number:</label>
+            <input type="text" id="rollNumber" name="rollNumber" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            <button type="submit">Submit</button>
+        </form>
+
+        <h2>Camera Feed</h2>
+        <div class="video-container">
+            <img src="{{ url_for('main.video_feed') }}" alt="Video Feed">
+        </div>
+    </div>
 </body>
 </html>

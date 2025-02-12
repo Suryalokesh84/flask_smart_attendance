@@ -1,8 +1,29 @@
+import os
+import datetime
+import json
+import numpy as np
 import cv2
 import face_recognition
-import numpy as np
-import os
-import json
+
+def save_attendance_record(name, roll_number):
+    attendance_record = {
+        'name': name,
+        'rollNumber': roll_number,
+        'date': datetime.datetime.now().strftime("%Y-%m-%d"),
+        'time': datetime.datetime.now().strftime("%H:%M:%S"),
+        'status': 'Present'
+    }
+
+    # Load existing attendance records
+    attendance_data = []
+    if os.path.exists('attendance_records.json'):
+        with open('attendance_records.json', 'r') as f:
+            attendance_data = json.load(f)
+
+    # Append new record and save back to JSON file
+    attendance_data.append(attendance_record)
+    with open('attendance_records.json', 'w') as f:
+        json.dump(attendance_data, f)
 
 def load_user_data():
     user_data = {}
@@ -16,13 +37,16 @@ def load_user_data():
 def preload_encodings(user_data):
     known_face_encodings = []
     known_face_names = []
+    known_face_roll_numbers = []
 
     for rollNumber, details in user_data.items():
         if 'encoding' in details:
             known_face_encodings.append(np.array(details['encoding']))
             known_face_names.append(details['name'])
+            known_face_roll_numbers.append(details['rollNumber'])
 
-    return known_face_encodings, known_face_names
+    return known_face_encodings, known_face_names, known_face_roll_numbers
+
 
 def main():
     user_data = load_user_data()
@@ -45,7 +69,7 @@ def main():
             best_match_index = np.argmin(face_distances)
             if matches[best_match_index]:
                 name = known_face_names[best_match_index]
-                
+                save_attendance_record(name)
 
             cv2.rectangle(frame, (left, top), (right, bottom), (0, 255, 0), 2)
             cv2.rectangle(frame, (left, bottom + 35), (right, bottom), (0, 255, 0), cv2.FILLED)

@@ -1,11 +1,13 @@
-from flask import Blueprint, render_template, request, redirect, url_for, flash
+from flask import Blueprint, render_template, request, redirect, url_for, flash, Response, stream_with_context
 import cv2
 import mediapipe as mp
 import face_recognition
 import numpy as np
 import json
 import os
+
 from .train import detect_faces, process_frame, save_images
+from .attendance import load_user_data, preload_encodings, save_attendance_record
 
 main = Blueprint('main', __name__)
 
@@ -52,14 +54,13 @@ def register():
 
 @main.route('/capture-attendance', methods=['GET'])
 def capture_attendance():
-    from .attendance import load_user_data, preload_encodings
-
     user_data = load_user_data()
-    known_face_encodings, known_face_names = preload_encodings(user_data)
+    known_face_encodings, known_face_names, known_face_roll_numbers = preload_encodings(user_data)
     
     cap = cv2.VideoCapture(0)
     attendance_recorded = False
     name = "Unknown"
+    roll_number = "Unknown"
 
     while cap.isOpened() and not attendance_recorded:
         ret, frame = cap.read()
@@ -75,7 +76,9 @@ def capture_attendance():
             best_match_index = np.argmin(face_distances)
             if matches[best_match_index]:
                 name = known_face_names[best_match_index]
+                roll_number = known_face_roll_numbers[best_match_index]
                 attendance_recorded = True
+                save_attendance_record(name, roll_number)
                 flash(f"Attendance recorded for {name}")
                 break
         
@@ -86,6 +89,29 @@ def capture_attendance():
     return redirect(url_for('main.index'))
 
 @main.route('/attendance-records')
-def attendance_records():
-    # Code to display attendance records
-    return render_template('attendance_records.html')
+def view_attendance_records():
+    attendance_data = []
+
+    # Load attendance records from JSON file
+    if os.path.exists('attendance_records.json'):
+        with open('attendance_records.json', 'r') as f:
+            attendance_data = json.load(f)
+
+    return render_template('attendance_records.html', attendance_data=attendance_data)
+
+@main.route('/video_feed')
+def video_feed():
+    return Response(gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
+
+def gen_frames():
+    cap = cv2.VideoCapture(0)
+    while True:
+        success, frame = cap.read()
+        if not success:
+            break
+        else:
+            ret, buffer = cv2.imencode('.jpg', frame)
+            frame = buffer.tobytes()
+            yield (b'--frame\r\n'
+                   b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+    cap.release()

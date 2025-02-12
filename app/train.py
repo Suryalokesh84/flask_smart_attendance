@@ -85,7 +85,7 @@ def main():
                 frame_count += 1
                 captured_frames.append(frame)
                 face_encodings.append(face_encoding)
-                if frame_count >= 50:  # Capture up to 10 photos
+                if frame_count >= 30:  # Capture up to 10 photos
                     save_images(captured_frames, user_details, face_encodings)
                     training_complete = True
                     message = "Training completed successfully!"
