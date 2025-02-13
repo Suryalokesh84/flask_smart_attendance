@@ -22,20 +22,18 @@ def detect_faces(frame):
         return []
 
 def process_frame(frame, face_encodings):
-    detections = detect_faces(frame)
-    if len(detections) != 1:
-        return frame, False, "Only one person should be visible in the camera."
-
-    encodings = face_recognition.face_encodings(frame)
+    small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)  # Speed up encoding
+    encodings = face_recognition.face_encodings(small_frame)
+    
     if len(encodings) == 0:
-        return frame, False, "No face detected. Please ensure your face is clearly visible."
-
+        return frame, False, "No face detected. Ensure good lighting and a clear face."
+    
     face_encoding = encodings[0]
     matches = face_recognition.compare_faces(face_encodings, face_encoding, tolerance=0.4)
     
     if True in matches:
         return frame, False, "This face is already registered."
-
+    
     return frame, True, face_encoding
 
 def save_images(frames, user_details, face_encodings):
@@ -63,15 +61,14 @@ def main():
         'rollNumber': input("Enter your roll number: "),
         'email': input("Enter your email: ")
     }
-    print("Details saved. Starting camera in 3 seconds...")
-    time.sleep(3)
-    
+   
     known_face_encodings = []
     cap = cv2.VideoCapture(0)
     training_complete = False
     captured_frames = []
     face_encodings = []
     frame_count = 0
+
     while cap.isOpened():
         ret, frame = cap.read()
         if not ret:
@@ -85,19 +82,18 @@ def main():
                 frame_count += 1
                 captured_frames.append(frame)
                 face_encodings.append(face_encoding)
-                if frame_count >= 30:  # Capture up to 10 photos
+                print(f"Captured image {frame_count}/10")  # Updated message
+                time.sleep(0.1)  # Keep it small to speed up
+                
+                if frame_count >= 10:  # Now capturing only 10 images
                     save_images(captured_frames, user_details, face_encodings)
                     training_complete = True
                     message = "Training completed successfully!"
                     draw_text_with_background(frame, message, (50, frame.shape[0] - 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), (255, 255, 255))
         
-        mask = np.zeros_like(frame)
-        mask = cv2.circle(mask, (frame.shape[1] // 2, frame.shape[0] // 2), 200, (255, 255, 255), 5)
-        frame = cv2.bitwise_or(frame, mask)
-
         cv2.imshow('Training', frame)
         if training_complete:
-            cv2.waitKey(5000)
+            cv2.waitKey(2000)  # Show "Training completed" message for 2 seconds
             break
         if cv2.waitKey(5) & 0xFF == ord('q'):
             break

@@ -40,7 +40,7 @@ def register():
                 frame_count += 1
                 captured_frames.append(frame)
                 face_encodings.append(face_encoding)
-                if frame_count >= 50:
+                if frame_count >= 10:
                     save_images(captured_frames, user_details, face_encodings)
                     training_complete = True
                     flash("Training completed successfully!")
@@ -115,3 +115,5 @@ def gen_frames():
             yield (b'--frame\r\n'
                    b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
     cap.release()
+
+
