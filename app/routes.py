@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, redirect, url_for, flash, Response, stream_with_context
+from flask import Blueprint, render_template, request, redirect, url_for, flash, Response
 import cv2
 import mediapipe as mp
 import face_recognition
@@ -6,7 +6,7 @@ import numpy as np
 import json
 import os
 
-from .train import detect_faces, process_frame, save_images
+from .train import process_frame, save_images
 from .attendance import load_user_data, preload_encodings, save_attendance_record
 
 main = Blueprint('main', __name__)
@@ -92,7 +92,6 @@ def capture_attendance():
 def view_attendance_records():
     attendance_data = []
 
-    # Load attendance records from JSON file
     if os.path.exists('attendance_records.json'):
         with open('attendance_records.json', 'r') as f:
             attendance_data = json.load(f)
@@ -115,5 +114,3 @@ def gen_frames():
             yield (b'--frame\r\n'
                    b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
     cap.release()
-
-

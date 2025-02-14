@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Face Recognition Attendance System</title>
+    <title>Smart Attendance System</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <header>
         <div class="header-container">
-            <h1>Recognize & Record            </h1>
+            <h1>Smart Attendance System            </h1>
         </div>
         <nav>
             <ul>
@@ -31,7 +31,7 @@
             {% endif %}
         {% endwith %}
         <section class="intro-section">
-            <h2>Welcome to the Face Recognition Attendance System</h2>
+            <h2>Welcome to the Smart Attendance System</h2>
             <p>Effortlessly manage and record attendance using cutting-edge face recognition technology. Register new users, capture attendance, and view records all in one place.</p>
             <a href="{{ url_for('main.register') }}" class="button">Get Started</a>
         </section>
