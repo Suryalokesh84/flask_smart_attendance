@@ -5,6 +5,7 @@ import face_recognition
 import numpy as np
 import json
 import os
+from datetime import datetime
 
 from .train import process_frame, save_images
 from .attendance import load_user_data, preload_encodings, save_attendance_record
@@ -21,7 +22,8 @@ def register():
         user_details = {
             'name': request.form['name'],
             'rollNumber': request.form['rollNumber'],
-            'email': request.form['email']
+            'email': request.form['email'],
+            'branch': request.form['branch']  # Include branch in user details
         }
         cap = cv2.VideoCapture(0)
         known_face_encodings = []
@@ -55,12 +57,13 @@ def register():
 @main.route('/capture-attendance', methods=['GET'])
 def capture_attendance():
     user_data = load_user_data()
-    known_face_encodings, known_face_names, known_face_roll_numbers = preload_encodings(user_data)
+    known_face_encodings, known_face_names, known_face_roll_numbers, known_face_branches = preload_encodings(user_data)
     
     cap = cv2.VideoCapture(0)
     attendance_recorded = False
     name = "Unknown"
     roll_number = "Unknown"
+    branch = "Unknown"
 
     while cap.isOpened() and not attendance_recorded:
         ret, frame = cap.read()
@@ -77,9 +80,10 @@ def capture_attendance():
             if matches[best_match_index]:
                 name = known_face_names[best_match_index]
                 roll_number = known_face_roll_numbers[best_match_index]
+                branch = known_face_branches[best_match_index]
                 attendance_recorded = True
-                save_attendance_record(name, roll_number)
-                flash(f"Attendance recorded for {name}")
+                save_attendance_record(name, roll_number, branch)  # No email argument
+                flash(f"Attendance recorded for {name} ({branch})")
                 break
         
         if attendance_recorded:
@@ -90,11 +94,38 @@ def capture_attendance():
 
 @main.route('/attendance-records')
 def view_attendance_records():
+    start_date = request.args.get('start_date')
+    end_date = request.args.get('end_date')
+    branch = request.args.get('branch')
+    search_term = request.args.get('search_term')
+    sort = request.args.get('sort')
+    
     attendance_data = []
 
     if os.path.exists('attendance_records.json'):
         with open('attendance_records.json', 'r') as f:
             attendance_data = json.load(f)
+
+    # Filter by date range
+    if start_date:
+        start_date = datetime.strptime(start_date, "%Y-%m-%d")
+        attendance_data = [record for record in attendance_data if datetime.strptime(record['date'], "%Y-%m-%d") >= start_date]
+    if end_date:
+        end_date = datetime.strptime(end_date, "%Y-%m-%d")
+        attendance_data = [record for record in attendance_data if datetime.strptime(record['date'], "%Y-%m-%d") <= end_date]
+    
+    # Filter by branch
+    if branch:
+        attendance_data = [record for record in attendance_data if record['branch'] == branch]
+    
+    # Search term filter
+    if search_term:
+        search_term = search_term.lower()
+        attendance_data = [record for record in attendance_data if search_term in record['name'].lower() or search_term in record['rollNumber'].lower() or search_term in record['branch'].lower()]
+
+    # Sort by roll number
+    if sort == 'rollNumber':
+        attendance_data = sorted(attendance_data, key=lambda x: x['rollNumber'])
 
     return render_template('attendance_records.html', attendance_data=attendance_data)
 

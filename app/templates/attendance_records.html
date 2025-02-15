@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attendance Records</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='attendance.css') }}">
 </head>
 <body>
     <header>
@@ -13,16 +13,50 @@
 
     <nav>
         <a href="{{ url_for('main.index') }}">Home</a>
-      
+        <a href="#" id="filterButton">Filter</a>
     </nav>
 
     <div class="container">
+        <div id="filterForm" class="filter-form" style="display: none;">
+            <form method="get" action="{{ url_for('main.view_attendance_records') }}">
+                <div class="form-group">
+                    <label for="start_date">Start Date:</label>
+                    <input type="date" id="start_date" name="start_date">
+                </div>
+                
+                <div class="form-group">
+                    <label for="end_date">End Date:</label>
+                    <input type="date" id="end_date" name="end_date">
+                </div>
+                
+                <div class="form-group">
+                    <label for="branch">Branch:</label>
+                    <select id="branch" name="branch">
+                        <option value="">All</option>
+                        <option value="CSM">CSM</option>
+                        <option value="CSD">CSD</option>
+                        <option value="CAI">CAI</option>
+                        <option value="AID">AID</option>
+                        <option value="CSC">CSC</option>
+                    </select>
+                </div>
+
+                <div class="form-group search-group">
+                    <label for="search_term">Search:</label>
+                    <input type="text" id="search_term" name="search_term" placeholder="Enter search term...">
+                </div>
+                
+                <button type="submit">Filter</button>
+            </form>
+        </div>
+        
         {% if attendance_data %}
             <table>
                 <thead>
                     <tr>
                         <th>Name</th>
                         <th>Roll Number</th>
+                        <th>Branch</th>
                         <th>Date</th>
                         <th>Time</th>
                         <th>Status</th>
@@ -33,6 +67,7 @@
                         <tr>
                             <td>{{ record.name }}</td>
                             <td>{{ record.rollNumber }}</td>
+                            <td>{{ record.branch }}</td>
                             <td>{{ record.date }}</td>
                             <td>{{ record.time }}</td>
                             <td>{{ record.status }}</td>
@@ -44,5 +79,12 @@
             <p>No attendance records found.</p>
         {% endif %}
     </div>
+
+    <script>
+        document.getElementById('filterButton').addEventListener('click', function() {
+            var filterForm = document.getElementById('filterForm');
+            filterForm.style.display = (filterForm.style.display === 'none' || filterForm.style.display === '') ? 'block' : 'none';
+        });
+    </script>
 </body>
 </html>

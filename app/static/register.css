@@ -67,8 +67,16 @@ nav a:hover {
 }
 
 /* Flash message styling */
-.flash-messages { /* ... (no changes needed) */ }
-.flash-messages li { /* ... (no changes needed) */ }
+.flash-messages {
+    background-color: #ffcccc;
+    color: #cc0000;
+    padding: 10px;
+    border: 1px solid #cc0000;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    list-style: none;
+    text-align: center;
+}
 
 /* Form styling */
 form {
@@ -78,33 +86,34 @@ form {
     margin-bottom: 2rem;
 }
 
-form label { /* Style the labels */
+form label { 
     font-weight: bold;
-    margin-bottom: 0.5rem; /* Space below labels */
+    margin-bottom: 0.5rem; 
 }
 
 form input[type="text"], 
-form input[type="email"] {
+form input[type="email"], 
+form select {
     padding: 0.75rem;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1rem;
-    transition: border-color 0.3s ease; /* Smooth border transition */
+    transition: border-color 0.3s ease; 
 }
 
 form input[type="text"]:focus,
-form input[type="email"]:focus {
-    border-color: #2563EB; /* Blue border on focus */
+form input[type="email"]:focus,
+form select:focus {
+    border-color: #2563EB; 
     outline: none;
-    box-shadow: 0 0 5px rgba(37, 99, 235, 0.2); /* Subtle blue shadow on focus */
+    box-shadow: 0 0 5px rgba(37, 99, 235, 0.2); 
 }
 
 form input[type="text"]::placeholder,
 form input[type="email"]::placeholder {
-    color: #aaa; /* Light gray placeholder text */
-    font-style: italic; /* Italic placeholder */
+    color: #aaa; 
+    font-style: italic;
 }
-
 
 form button {
     padding: 0.75rem;
@@ -131,9 +140,22 @@ form button:hover {
     width: 300px;
     height: auto;
     border: 1px solid #ccc;
-    border-radius: 8px; /* Changed to square/slightly rounded */
+    border-radius: 8px; 
     margin-top: 1rem;
 }
 
 /* Responsive design */
-@media (max-width: 600px) { /* ... (no changes needed) */ }
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    form {
+        gap: 0.5rem;
+    }
+}

@@ -1,0 +1,239 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 0.5px;
+    text-align: center;
+}
+
+nav {
+    margin: 20px 0;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #e9ecef;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(245, 11, 11, 0.1);
+    border-radius: 5px;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-width: 150px;
+}
+
+.search-group {
+    flex-direction: row;
+    align-items: center;
+}
+
+input[type="date"], select, input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1 1 auto;
+    min-width: 150px;
+}
+
+button[type="submit"] {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    min-width: 150px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 9px 4px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e9ecef;
+}
+
+th {
+    background-color: #476688;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+tr:nth-child {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f9fcff;
+}
+
+td {
+    vertical-align: middle;
+    color: #333;
+}
+
+tbody tr {
+    border-bottom: 1px solid #e9ecef;
+}
+
+.flash-messages {
+    background-color: #ffcccc;
+    color: #cc0000;
+    padding: 10px;
+    border: 1px solid #cc0000;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    list-style: none;
+    text-align: center;
+}
+
+.intro-section {
+    text-align: center;
+}
+
+.intro-section h2 {
+    margin-bottom: 20px;
+}
+
+.intro-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.intro-section .button {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.video-container img {
+    width: 100%;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    input[type="date"], select, input[type="text"], button[type="submit"] {
+        min-width: 100%;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+
+    thead tr {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 10px;
+        background-color: #f8f9fa;
+        border: 1px solid #e9ecef;
+        border-radius: 5px;
+    }
+
+    td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 5px;
+        border: none;
+        border-bottom: 1px solid #e9ecef;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: calc(50% - 20px);
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+
+    td:last-child {
+        border-bottom: 0;
+    }
+}

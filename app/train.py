@@ -56,12 +56,15 @@ def draw_text_with_background(frame, text, position, font, font_scale, text_colo
     cv2.putText(frame, text, (x, y), font, font_scale, text_color, thickness=2, lineType=cv2.LINE_AA)
 
 def main():
+    branches = ["CSM", "CSD", "CAI", "AID", "CSC"]
+
     user_details = {
         'name': input("Enter your name: "),
         'rollNumber': input("Enter your roll number: "),
-        'email': input("Enter your email: ")
+        'email': input("Enter your email: "),
+        'branch': input(f"Enter your branch ({'/'.join(branches)}): ")
     }
-   
+
     known_face_encodings = []
     cap = cv2.VideoCapture(0)
     training_complete = False
