@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capture Attendance</title>
+    <script>
+        function checkAttendanceMarked() {
+            fetch('/video_feed')
+                .then(response => {
+                    if (response.ok) {
+                        response.text().then(text => {
+                            if (text.includes('Attendance Recorded')) {
+                                window.location.href = "{{ url_for('main.attendance_confirmation', name='name_placeholder', branch='branch_placeholder') }}";
+                            }
+                        });
+                    }
+                });
+        }
+        setInterval(checkAttendanceMarked, 1000);
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Capture Attendance</h1>
+    </header>
+    <nav>
+        <a href="{{ url_for('main.index') }}">Home</a>
+    </nav>
+    <div class="video-container">
+        <img src="{{ url_for('main.video_feed') }}" alt="Camera Feed">
+    </div>
+</body>
+</html>
