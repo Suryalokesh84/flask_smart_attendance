@@ -80,6 +80,7 @@ def register():
 
 @main.route('/capture-attendance', methods=['GET'])
 def capture_attendance():
+    """ Capture attendance using face recognition and blink detection """
     user_data = load_user_data()
     known_face_encodings, known_face_names, known_face_roll_numbers, known_face_branches = preload_encodings(user_data)
     
@@ -88,6 +89,7 @@ def capture_attendance():
     name = "Unknown"
     roll_number = "Unknown"
     branch = "Unknown"
+    email = None
     blink_count = 0
     last_blink_time = datetime.now()
 
@@ -123,9 +125,10 @@ def capture_attendance():
                             name = known_face_names[best_match_index]
                             roll_number = known_face_roll_numbers[best_match_index]
                             branch = known_face_branches[best_match_index]
+                            email = user_data[roll_number]['email']  # Get user's email from JSON
                             attendance_recorded = True
-                            save_attendance_record(name, roll_number, branch)
-                            flash(f"Attendance recorded for {name} ({branch})")
+                            save_attendance_record(name, roll_number, branch, email)
+                            flash(f"✅ Attendance recorded for {name} ({branch}) and email sent successfully!")
                             break
         
             if attendance_recorded:
@@ -133,6 +136,7 @@ def capture_attendance():
 
     cap.release()
     return redirect(url_for('main.index'))
+
 
 @main.route('/attendance-records')
 def view_attendance_records():

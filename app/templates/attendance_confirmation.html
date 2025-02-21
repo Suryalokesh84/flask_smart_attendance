@@ -10,4 +10,12 @@
         <h1>Attendance Confirmation</h1>
     </header>
     <nav>
-        <a href="{{ url_for('main.index') }}">Home</a
+        <a href="{{ url_for('main.index') }}">Home</a>
+        <a href="{{ url_for('main.view_attendance_records') }}">View Attendance Records</a>
+    </nav>
+    <div class="confirmation-message">
+        <h2>Attendance recorded for {{ name }} ({{ branch }})</h2>
+        <p>Thank you for confirming your attendance. Your record has been updated.</p>
+    </div>
+</body>
+</html>

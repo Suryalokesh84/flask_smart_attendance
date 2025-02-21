@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capture Attendance</title>
+    <title>Start Blink</title>
 </head>
 <body>
     <header>
-        <h1>Capture Attendance</h1>
+        <h1>Mark Attendance</h1>
     </header>
     <nav>
         <a href="{{ url_for('main.index') }}">Home</a>
     </nav>
-    <form method="POST" action="{{ url_for('main.capture_attendance') }}">
-        <button type="submit">Mark Attendance</button>
-    </form>
-</body>
-</html>
+    <div class="instructions">
+        <h2>The camera is started, please start blinking your eyes to mark the attendance.</h2>
+        <div class="video-container">
