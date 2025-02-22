@@ -179,15 +179,17 @@ def view_attendance_records():
 def video_feed():
     return Response(gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
+
 def gen_frames():
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(0)  # Open webcam
     while True:
-        success, frame = cap.read()
+        success, frame = cap.read()  # Read frame-by-frame
         if not success:
             break
         else:
-            ret, buffer = cv2.imencode('.jpg', frame)
-            frame = buffer.tobytes()
+            frame = cv2.flip(frame, 1)  # Flip frame horizontally (fix mirroring)
+            ret, buffer = cv2.imencode('.jpg', frame)  # Encode frame as JPEG
+            frame = buffer.tobytes()  # Convert to bytes
             yield (b'--frame\r\n'
-                   b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
-    cap.release()
+                   b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')  # Stream frame
+    cap.release()  # Release webcam
