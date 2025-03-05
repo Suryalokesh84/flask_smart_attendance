@@ -17,8 +17,12 @@
                 <li><a href="{{ url_for('main.register') }}">Register</a></li>
                 <li><a href="{{ url_for('main.capture_attendance') }}">Mark Attendance</a></li>
                 <li><a href="{{ url_for('main.view_attendance_records') }}">View Attendance Records</a></li>
+                <li><a href="{{ url_for('admin.login') }}">Admin Login</a></li>
+                
+
             </ul>
         </nav>
+        
     </header>
     <main class="container">
         {% with messages = get_flashed_messages() %}

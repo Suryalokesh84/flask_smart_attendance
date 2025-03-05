@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin_style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('admin.dashboard') }}">Home</a></li>
+                <li><a href="{{ url_for('admin.students') }}">Student Records</a></li>
+                <li><a href="{{ url_for('admin.attendance_records') }}">View Attendance</a></li>
+                <li><a href="{{ url_for('admin.mark_attendance') }}">Mark Attendance</a></li>
+                <li><a href="{{ url_for('admin.edit_students') }}">Edit Students</a></li>
+                <li><a href="{{ url_for('main.index') }}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Welcome, Admin</h2>
+            <p>Use the sections below to manage student records and attendance.</p>
+        </section>
+
+        <div class="dashboard-sections">
+            <div class="section">
+                <h3>Student Records</h3>
+                <p>View all registered students.</p>
+                <a href="{{ url_for('admin.students') }}" class="button">View</a>
+            </div>
+
+            <div class="section">
+                <h3>View Attendance</h3>
+                <p>Check attendance records.</p>
+                <a href="{{ url_for('admin.attendance_records') }}" class="button">View</a>
+            </div>
+
+            <div class="section">
+                <h3>Mark Attendance</h3>
+                <p>Manually mark attendance for students.</p>
+                <a href="{{ url_for('admin.mark_attendance') }}" class="button">Mark</a>
+            </div>
+
+            <div class="section">
+                <h3>Edit Student Records</h3>
+                <p>Modify student details.</p>
+                <a href="{{ url_for('admin.edit_students') }}" class="button">Edit</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
