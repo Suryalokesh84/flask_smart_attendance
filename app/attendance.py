@@ -82,3 +82,21 @@ def preload_encodings(user_data):
             known_face_branches.append(details.get('branch', 'Unknown'))
 
     return known_face_encodings, known_face_names, known_face_roll_numbers, known_face_branches
+
+
+import os
+import json
+
+def get_all_users():
+    user_data_folder = "user_data"
+    users = []
+
+    if os.path.exists(user_data_folder):
+        for filename in os.listdir(user_data_folder):
+            if filename.endswith(".json"):
+                file_path = os.path.join(user_data_folder, filename)
+                with open(file_path, "r") as f:
+                    user_details = json.load(f)
+                    users.append(user_details)
+
+    return users

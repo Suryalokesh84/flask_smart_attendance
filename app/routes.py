@@ -194,4 +194,10 @@ def gen_frames():
                    b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')  # Stream frame
     cap.release()  # Release webcam
 
+from .attendance import get_all_users
 
+
+@main.route('/admin/students')
+def admin_students():
+    students = get_all_users()
+    return render_template('students.html', students=students)
