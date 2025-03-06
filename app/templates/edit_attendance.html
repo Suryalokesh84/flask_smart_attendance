@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Attendance</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stud.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Edit Attendance - {{ attendance_data.date }}</h2>
+
+        <form method="POST">
+            <table>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Present</th>
+                </tr>
+                {% for student, status in attendance_data.records.items() %}
+                <tr>
+                    <td>{{ student }}</td>
+                    <td>
+                        <input type="checkbox" name="{{ student }}" {% if status == 'Present' %}checked{% endif %}>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+            
+            <button type="submit" class="btn">Update Attendance</button>
+        </form>
+
+        <button class="btn back-btn" onclick="location.href='/mark_attendance'">Back</button>
+    </div>
+</body>
+</html>

@@ -10,12 +10,61 @@
 
     <!-- Link to External CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='stud.css') }}">
+    
+    <style>
+        /* Styling for Filter Section */
+        .filter-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .filter-container select, .filter-container button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .filter-container button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border: none;
+            transition: 0.3s;
+        }
+
+        .filter-container button:hover {
+            background-color: #0056b3;
+        }
+
+        
+        .title {
+            text-align: center;
+            font-weight: 600;
+        }
+    </style>
 </head>
 <body>
 
     <h2 class="title">📚 Student Records</h2>
     
-    <table border="1">
+    <!-- Filter Section -->
+<div class="filter-container">
+    <label for="branch-filter">Filter by Branch:</label>
+    <select id="branch-filter" onchange="filterByBranch()">
+        <option value="all">All</option>
+        <option value="CSM">CSM</option>
+        <option value="CAI">CAI</option>
+        <option value="CSC">CSC</option>
+        <option value="AID">AID</option>
+        <option value="CSD">CSD</option>
+    </select>
+    <button onclick="filterByBranch()">Search</button>
+</div>
+
+    
+    <table id="student-table">
         <tr>
             <th>Name</th>
             <th>Roll Number</th>
@@ -23,7 +72,7 @@
             <th>Branch</th>
         </tr>
         {% for student in students %}
-        <tr>
+        <tr class="student-row" data-branch="{{ student.branch }}">
             <td>{{ student.name }}</td>
             <td>{{ student.rollNumber }}</td>
             <td>{{ student.email }}</td>
@@ -31,6 +80,22 @@
         </tr>
         {% endfor %}
     </table>
+
+    <script>
+        function filterByBranch() {
+            let selectedBranch = document.getElementById("branch-filter").value.toLowerCase();
+            let rows = document.querySelectorAll(".student-row");
+
+            rows.forEach(row => {
+                let branch = row.getAttribute("data-branch").toLowerCase();
+                if (selectedBranch === "all" || branch === selectedBranch) {
+                    row.style.display = "";
+                } else {
+                    row.style.display = "none";
+                }
+            });
+        }
+    </script>
 
 </body>
 </html>

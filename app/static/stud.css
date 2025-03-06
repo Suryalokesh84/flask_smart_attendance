@@ -44,3 +44,277 @@ td {
         padding: 8px;
     }
 }
+
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2, h3 {
+    color: #333;
+}
+
+select, button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #218838;
+}
+
+
+/* General Page Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Container Styling */
+.container {
+    max-width: 900px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Style */
+h2 {
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Flash Messages Styling */
+.alert {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Block for Attendance Status */
+.attendance-block {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.attendance-box {
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    width: 30%;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.success-box {
+    background-color: #28a745;
+}
+
+.info-box {
+    background-color: #007bff;
+}
+
+/* Branch Selection */
+form label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+form select {
+    font-size: 16px;
+}
+
+/* Table Styling */
+.table {
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+.table-dark {
+    background-color: #343a40;
+    color: white;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Submit Button */
+.btn-success {
+    width: 100%;
+    font-size: 18px;
+}
+
+/* Close Button for Alerts */
+.btn-close {
+    background: none;
+    border: none;
+}
+
+/* Attendance Icons */
+.attendance-icon {
+    width: 40px;
+    height: 40px;
+}
+
+/* Add images to attendance summary */
+.attendance-summary {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.attendance-summary div {
+    text-align: center;
+}
+
+.attendance-summary img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+/* General Page Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #eef1f6;
+}
+
+/* Container Styling */
+.container {
+    max-width: 900px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading Style */
+h2 {
+    text-align: center;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+/* Flash Messages Styling */
+.alert {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Attendance Summary Styling */
+.attendance-summary {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.attendance-summary div {
+    text-align: center;
+}
+
+.attendance-summary img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+/* Table Styling */
+.table {
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table thead {
+    background-color: #007bff; /* Updated header color */
+    color: white;
+    font-size: 18px;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table tbody tr:hover {
+    background-color: #d9e7ff; /* Light blue hover effect */
+}
+
+/* Stylish Checkboxes */
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    appearance: none;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    position: relative;
+    transition: 0.3s;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #007bff;
+    border-color: #0056b3;
+}
+
+input[type="checkbox"]::before {
+    content: "✔";
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.2s;
+}
+
+input[type="checkbox"]:checked::before {
+    opacity: 1;
+}
+
+/* Submit Button */
+.btn-success {
+    width: 100%;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+/* Close Button for Alerts */
+.btn-close {
+    background: none;
+    border: none;
+}
