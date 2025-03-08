@@ -1,1 +1,866 @@
-[{"name": "Surya Lokesh", "rollNumber": "22B21A4284", "branch": "CSM", "date": "2025-03-06", "time": "21:31:54", "status": "Present"}, {"name": "MADHUSUDHANA RAO", "rollNumber": "22B21A4285", "branch": "CSM", "date": "2025-03-06", "time": "21:31:54", "status": "Absent"}, {"name": "Lokesh", "rollNumber": "22B21A4296", "branch": "CSM", "date": "2025-03-06", "time": "21:31:54", "status": "Absent"}, {"name": "reddy ", "rollNumber": "4293", "branch": "CSM", "date": "2025-03-06", "time": "21:31:54", "status": "Absent"}, {"name": "umesh", "rollNumber": "4295", "branch": "CSM", "date": "2025-03-06", "time": "21:31:54", "status": "Absent"}, {"name": "Surya Lokesh", "rollNumber": "22B21A4284", "branch": "CSM", "date": "2025-03-06", "time": "21:43:20", "status": "Present"}, {"name": "MADHUSUDHANA RAO", "rollNumber": "22B21A4285", "branch": "CSM", "date": "2025-03-06", "time": "21:43:20", "status": "Absent"}, {"name": "Lokesh", "rollNumber": "22B21A4296", "branch": "CSM", "date": "2025-03-06", "time": "21:43:20", "status": "Absent"}, {"name": "reddy ", "rollNumber": "4293", "branch": "CSM", "date": "2025-03-06", "time": "21:43:20", "status": "Absent"}, {"name": "umesh", "rollNumber": "4295", "branch": "CSM", "date": "2025-03-06", "time": "21:43:20", "status": "Absent"}, {"name": "Surya Lokesh", "rollNumber": "22B21A4284", "branch": "CSM", "date": "2025-03-06", "time": "21:44:41", "status": "Absent"}, {"name": "MADHUSUDHANA RAO", "rollNumber": "22B21A4285", "branch": "CSM", "date": "2025-03-06", "time": "21:44:41", "status": "Absent"}, {"name": "Lokesh", "rollNumber": "22B21A4296", "branch": "CSM", "date": "2025-03-06", "time": "21:44:41", "status": "Absent"}, {"name": "reddy ", "rollNumber": "4293", "branch": "CSM", "date": "2025-03-06", "time": "21:44:41", "status": "Present"}, {"name": "umesh", "rollNumber": "4295", "branch": "CSM", "date": "2025-03-06", "time": "21:44:41", "status": "Absent"}, {"name": "Surya Lokesh", "rollNumber": "22B21A4284", "branch": "CSM", "date": "2025-03-06", "time": "21:45:52", "status": "Present"}, {"name": "MADHUSUDHANA RAO", "rollNumber": "22B21A4285", "branch": "CSM", "date": "2025-03-06", "time": "21:45:52", "status": "Absent"}, {"name": "Lokesh", "rollNumber": "22B21A4296", "branch": "CSM", "date": "2025-03-06", "time": "21:45:52", "status": "Absent"}, {"name": "reddy ", "rollNumber": "4293", "branch": "CSM", "date": "2025-03-06", "time": "21:45:52", "status": "Absent"}, {"name": "umesh", "rollNumber": "4295", "branch": "CSM", "date": "2025-03-06", "time": "21:45:52", "status": "Absent"}, {"name": "Surya Lokesh", "rollNumber": "22B21A4284", "branch": "CSM", "date": "2025-03-06", "time": "21:49:13", "status": "Present"}, {"name": "MADHUSUDHANA RAO", "rollNumber": "22B21A4285", "branch": "CSM", "date": "2025-03-06", "time": "21:49:13", "status": "Absent"}, {"name": "Lokesh", "rollNumber": "22B21A4296", "branch": "CSM", "date": "2025-03-06", "time": "21:49:13", "status": "Absent"}, {"name": "reddy ", "rollNumber": "4293", "branch": "CSM", "date": "2025-03-06", "time": "21:49:13", "status": "Absent"}, {"name": "umesh", "rollNumber": "4295", "branch": "CSM", "date": "2025-03-06", "time": "21:49:13", "status": "Absent"}, {"name": "Surya Lokesh", "rollNumber": "22B21A4284", "branch": "CSM", "date": "2025-03-06", "time": "21:51:46", "status": "Present"}, {"name": "MADHUSUDHANA RAO", "rollNumber": "22B21A4285", "branch": "CSM", "date": "2025-03-06", "time": "21:51:46", "status": "Absent"}, {"name": "Lokesh", "rollNumber": "22B21A4296", "branch": "CSM", "date": "2025-03-06", "time": "21:51:46", "status": "Absent"}, {"name": "reddy ", "rollNumber": "4293", "branch": "CSM", "date": "2025-03-06", "time": "21:51:46", "status": "Absent"}, {"name": "umesh", "rollNumber": "4295", "branch": "CSM", "date": "2025-03-06", "time": "21:51:46", "status": "Absent"}, {"name": "Surya Lokesh", "rollNumber": "22B21A4284", "branch": "CSM", "date": "2025-03-06", "time": "21:52:53", "status": "Present"}, {"name": "MADHUSUDHANA RAO", "rollNumber": "22B21A4285", "branch": "CSM", "date": "2025-03-06", "time": "21:52:53", "status": "Present"}, {"name": "Lokesh", "rollNumber": "22B21A4296", "branch": "CSM", "date": "2025-03-06", "time": "21:52:53", "status": "Absent"}, {"name": "reddy ", "rollNumber": "4293", "branch": "CSM", "date": "2025-03-06", "time": "21:52:53", "status": "Absent"}, {"name": "umesh", "rollNumber": "4295", "branch": "CSM", "date": "2025-03-06", "time": "21:52:53", "status": "Absent"}, {"name": "Surya Lokesh", "rollNumber": "22B21A4284", "branch": "CSM", "date": "2025-03-06", "time": "21:53:19", "status": "Present"}, {"name": "MADHUSUDHANA RAO", "rollNumber": "22B21A4285", "branch": "CSM", "date": "2025-03-06", "time": "21:53:19", "status": "Present"}, {"name": "Lokesh", "rollNumber": "22B21A4296", "branch": "CSM", "date": "2025-03-06", "time": "21:53:19", "status": "Absent"}, {"name": "reddy ", "rollNumber": "4293", "branch": "CSM", "date": "2025-03-06", "time": "21:53:19", "status": "Absent"}, {"name": "umesh", "rollNumber": "4295", "branch": "CSM", "date": "2025-03-06", "time": "21:53:19", "status": "Absent"}, {"name": "Surya Lokesh", "rollNumber": "22B21A4284", "branch": "CSM", "date": "2025-03-06", "time": "21:55:51", "status": "Present"}, {"name": "MADHUSUDHANA RAO", "rollNumber": "22B21A4285", "branch": "CSM", "date": "2025-03-06", "time": "21:55:51", "status": "Absent"}, {"name": "Lokesh", "rollNumber": "22B21A4296", "branch": "CSM", "date": "2025-03-06", "time": "21:55:51", "status": "Absent"}, {"name": "reddy ", "rollNumber": "4293", "branch": "CSM", "date": "2025-03-06", "time": "21:55:51", "status": "Absent"}, {"name": "umesh", "rollNumber": "4295", "branch": "CSM", "date": "2025-03-06", "time": "21:55:51", "status": "Absent"}, {"name": "Surya Lokesh", "rollNumber": "22B21A4284", "branch": "CSM", "date": "2025-03-06", "time": "22:12:14", "status": "Absent"}, {"name": "MADHUSUDHANA RAO", "rollNumber": "22B21A4285", "branch": "CSM", "date": "2025-03-06", "time": "22:12:14", "status": "Present"}, {"name": "Lokesh", "rollNumber": "22B21A4296", "branch": "CSM", "date": "2025-03-06", "time": "22:12:14", "status": "Absent"}, {"name": "reddy ", "rollNumber": "4293", "branch": "CSM", "date": "2025-03-06", "time": "22:12:14", "status": "Absent"}, {"name": "umesh", "rollNumber": "4295", "branch": "CSM", "date": "2025-03-06", "time": "22:12:14", "status": "Absent"}, {"name": "Surya Lokesh", "rollNumber": "22B21A4284", "branch": "CSM", "date": "2025-03-06", "time": "22:12:56", "status": "Present"}, {"name": "MADHUSUDHANA RAO", "rollNumber": "22B21A4285", "branch": "CSM", "date": "2025-03-06", "time": "22:12:56", "status": "Absent"}, {"name": "Lokesh", "rollNumber": "22B21A4296", "branch": "CSM", "date": "2025-03-06", "time": "22:12:56", "status": "Absent"}, {"name": "reddy ", "rollNumber": "4293", "branch": "CSM", "date": "2025-03-06", "time": "22:12:56", "status": "Absent"}, {"name": "umesh", "rollNumber": "4295", "branch": "CSM", "date": "2025-03-06", "time": "22:12:56", "status": "Absent"}, {"name": "Surya Lokesh", "rollNumber": "22B21A4284", "branch": "CSM", "date": "2025-03-06", "time": "22:13:58", "status": "Absent"}, {"name": "MADHUSUDHANA RAO", "rollNumber": "22B21A4285", "branch": "CSM", "date": "2025-03-06", "time": "22:13:58", "status": "Present"}, {"name": "Lokesh", "rollNumber": "22B21A4296", "branch": "CSM", "date": "2025-03-06", "time": "22:13:58", "status": "Absent"}, {"name": "reddy ", "rollNumber": "4293", "branch": "CSM", "date": "2025-03-06", "time": "22:13:58", "status": "Absent"}, {"name": "umesh", "rollNumber": "4295", "branch": "CSM", "date": "2025-03-06", "time": "22:13:58", "status": "Absent"}, {"name": "Surya Lokesh", "rollNumber": "22B21A4284", "branch": "CSM", "date": "2025-03-06", "time": "22:14:23", "status": "Present"}, {"name": "MADHUSUDHANA RAO", "rollNumber": "22B21A4285", "branch": "CSM", "date": "2025-03-06", "time": "22:14:23", "status": "Absent"}, {"name": "Lokesh", "rollNumber": "22B21A4296", "branch": "CSM", "date": "2025-03-06", "time": "22:14:23", "status": "Absent"}, {"name": "reddy ", "rollNumber": "4293", "branch": "CSM", "date": "2025-03-06", "time": "22:14:23", "status": "Absent"}, {"name": "umesh", "rollNumber": "4295", "branch": "CSM", "date": "2025-03-06", "time": "22:14:23", "status": "Absent"}, {"name": "Surya Lokesh", "rollNumber": "22B21A4284", "branch": "CSM", "date": "2025-03-06", "time": "22:16:34", "status": "Present"}, {"name": "MADHUSUDHANA RAO", "rollNumber": "22B21A4285", "branch": "CSM", "date": "2025-03-06", "time": "22:16:34", "status": "Absent"}, {"name": "Lokesh", "rollNumber": "22B21A4296", "branch": "CSM", "date": "2025-03-06", "time": "22:16:34", "status": "Absent"}, {"name": "reddy ", "rollNumber": "4293", "branch": "CSM", "date": "2025-03-06", "time": "22:16:34", "status": "Absent"}, {"name": "umesh", "rollNumber": "4295", "branch": "CSM", "date": "2025-03-06", "time": "22:16:34", "status": "Absent"}, {"name": "Surya Lokesh", "rollNumber": "22B21A4284", "branch": "CSM", "date": "2025-03-06", "time": "22:18:10", "status": "Present"}, {"name": "MADHUSUDHANA RAO", "rollNumber": "22B21A4285", "branch": "CSM", "date": "2025-03-06", "time": "22:18:10", "status": "Absent"}, {"name": "Lokesh", "rollNumber": "22B21A4296", "branch": "CSM", "date": "2025-03-06", "time": "22:18:10", "status": "Absent"}, {"name": "reddy ", "rollNumber": "4293", "branch": "CSM", "date": "2025-03-06", "time": "22:18:10", "status": "Absent"}, {"name": "umesh", "rollNumber": "4295", "branch": "CSM", "date": "2025-03-06", "time": "22:18:10", "status": "Absent"}, {"name": "Surya Lokesh", "rollNumber": "22B21A4284", "branch": "CSM", "date": "2025-03-06", "time": "22:18:31", "status": "Present"}, {"name": "MADHUSUDHANA RAO", "rollNumber": "22B21A4285", "branch": "CSM", "date": "2025-03-06", "time": "22:18:31", "status": "Absent"}, {"name": "Lokesh", "rollNumber": "22B21A4296", "branch": "CSM", "date": "2025-03-06", "time": "22:18:31", "status": "Absent"}, {"name": "reddy ", "rollNumber": "4293", "branch": "CSM", "date": "2025-03-06", "time": "22:18:31", "status": "Absent"}, {"name": "umesh", "rollNumber": "4295", "branch": "CSM", "date": "2025-03-06", "time": "22:18:31", "status": "Absent"}, {"name": "Surya Lokesh", "rollNumber": "22B21A4284", "branch": "CSM", "date": "2025-03-06", "time": "22:21:08", "status": "Present"}, {"name": "MADHUSUDHANA RAO", "rollNumber": "22B21A4285", "branch": "CSM", "date": "2025-03-06", "time": "22:21:08", "status": "Present"}, {"name": "Lokesh", "rollNumber": "22B21A4296", "branch": "CSM", "date": "2025-03-06", "time": "22:21:08", "status": "Absent"}, {"name": "reddy ", "rollNumber": "4293", "branch": "CSM", "date": "2025-03-06", "time": "22:21:08", "status": "Absent"}, {"name": "umesh", "rollNumber": "4295", "branch": "CSM", "date": "2025-03-06", "time": "22:21:08", "status": "Absent"}, {"name": "Surya Lokesh", "rollNumber": "22B21A4284", "branch": "CSM", "date": "2025-03-06", "time": "22:21:49", "status": "Present"}, {"name": "MADHUSUDHANA RAO", "rollNumber": "22B21A4285", "branch": "CSM", "date": "2025-03-06", "time": "22:21:49", "status": "Present"}, {"name": "Lokesh", "rollNumber": "22B21A4296", "branch": "CSM", "date": "2025-03-06", "time": "22:21:49", "status": "Present"}, {"name": "reddy ", "rollNumber": "4293", "branch": "CSM", "date": "2025-03-06", "time": "22:21:49", "status": "Absent"}, {"name": "umesh", "rollNumber": "4295", "branch": "CSM", "date": "2025-03-06", "time": "22:21:49", "status": "Absent"}, {"name": "Surya Lokesh", "rollNumber": "22B21A4284", "branch": "CSM", "date": "2025-03-06", "time": "22:24:37", "status": "Absent"}, {"name": "MADHUSUDHANA RAO", "rollNumber": "22B21A4285", "branch": "CSM", "date": "2025-03-06", "time": "22:24:37", "status": "Absent"}, {"name": "Lokesh", "rollNumber": "22B21A4296", "branch": "CSM", "date": "2025-03-06", "time": "22:24:37", "status": "Absent"}, {"name": "reddy ", "rollNumber": "4293", "branch": "CSM", "date": "2025-03-06", "time": "22:24:37", "status": "Absent"}, {"name": "umesh", "rollNumber": "4295", "branch": "CSM", "date": "2025-03-06", "time": "22:24:37", "status": "Absent"}, {"name": "Surya Lokesh", "rollNumber": "22B21A4284", "branch": "CSM", "date": "2025-03-06", "time": "22:26:06", "status": "Present"}, {"name": "MADHUSUDHANA RAO", "rollNumber": "22B21A4285", "branch": "CSM", "date": "2025-03-06", "time": "22:26:06", "status": "Absent"}, {"name": "Lokesh", "rollNumber": "22B21A4296", "branch": "CSM", "date": "2025-03-06", "time": "22:26:06", "status": "Absent"}, {"name": "reddy ", "rollNumber": "4293", "branch": "CSM", "date": "2025-03-06", "time": "22:26:06", "status": "Absent"}, {"name": "umesh", "rollNumber": "4295", "branch": "CSM", "date": "2025-03-06", "time": "22:26:06", "status": "Absent"}, {"name": "Surya Lokesh", "rollNumber": "22B21A4284", "branch": "CSM", "date": "2025-03-06", "time": "22:27:55", "status": "Present"}, {"name": "MADHUSUDHANA RAO", "rollNumber": "22B21A4285", "branch": "CSM", "date": "2025-03-06", "time": "22:27:55", "status": "Absent"}, {"name": "Lokesh", "rollNumber": "22B21A4296", "branch": "CSM", "date": "2025-03-06", "time": "22:27:55", "status": "Absent"}, {"name": "reddy ", "rollNumber": "4293", "branch": "CSM", "date": "2025-03-06", "time": "22:27:55", "status": "Absent"}, {"name": "umesh", "rollNumber": "4295", "branch": "CSM", "date": "2025-03-06", "time": "22:27:55", "status": "Absent"}, {"name": "Surya Lokesh", "rollNumber": "22B21A4284", "branch": "CSM", "date": "2025-03-06", "status": "Absent"}, {"name": "MADHUSUDHANA RAO", "rollNumber": "22B21A4285", "branch": "CSM", "date": "2025-03-06", "status": "Present"}, {"name": "Lokesh", "rollNumber": "22B21A4296", "branch": "CSM", "date": "2025-03-06", "status": "Present"}, {"name": "reddy ", "rollNumber": "4293", "branch": "CSM", "date": "2025-03-06", "status": "Absent"}, {"name": "umesh", "rollNumber": "4295", "branch": "CSM", "date": "2025-03-06", "status": "Absent"}, {"name": "Surya Lokesh", "rollNumber": "22B21A4284", "branch": "CSM", "date": "2025-03-06", "time": "22:43:13", "status": "Absent"}, {"name": "MADHUSUDHANA RAO", "rollNumber": "22B21A4285", "branch": "CSM", "date": "2025-03-06", "time": "22:43:13", "status": "Present"}, {"name": "Lokesh", "rollNumber": "22B21A4296", "branch": "CSM", "date": "2025-03-06", "time": "22:43:13", "status": "Present"}, {"name": "reddy ", "rollNumber": "4293", "branch": "CSM", "date": "2025-03-06", "time": "22:43:13", "status": "Present"}, {"name": "umesh", "rollNumber": "4295", "branch": "CSM", "date": "2025-03-06", "time": "22:43:13", "status": "Absent"}, {"name": "Surya Lokesh", "rollNumber": "22B21A4284", "branch": "CSM", "date": "2025-03-06", "time": "23:04:03", "status": "Present"}, {"name": "MADHUSUDHANA RAO", "rollNumber": "22B21A4285", "branch": "CSM", "date": "2025-03-06", "time": "23:04:03", "status": "Present"}, {"name": "Lokesh", "rollNumber": "22B21A4296", "branch": "CSM", "date": "2025-03-06", "time": "23:04:03", "status": "Absent"}, {"name": "reddy ", "rollNumber": "4293", "branch": "CSM", "date": "2025-03-06", "time": "23:04:03", "status": "Absent"}, {"name": "umesh", "rollNumber": "4295", "branch": "CSM", "date": "2025-03-06", "time": "23:04:03", "status": "Absent"}, {"name": "Surya Lokesh", "rollNumber": "22B21A4284", "branch": "CSM", "date": "2025-03-06", "time": "23:07:09", "status": "Present"}, {"name": "MADHUSUDHANA RAO", "rollNumber": "22B21A4285", "branch": "CSM", "date": "2025-03-06", "time": "23:07:09", "status": "Present"}, {"name": "Lokesh", "rollNumber": "22B21A4296", "branch": "CSM", "date": "2025-03-06", "time": "23:07:09", "status": "Absent"}, {"name": "reddy ", "rollNumber": "4293", "branch": "CSM", "date": "2025-03-06", "time": "23:07:09", "status": "Absent"}, {"name": "umesh", "rollNumber": "4295", "branch": "CSM", "date": "2025-03-06", "time": "23:07:09", "status": "Absent"}, {"name": "Surya Lokesh", "rollNumber": "22B21A4284", "branch": "CSM", "date": "2025-03-06", "time": "23:08:01", "status": "Absent"}, {"name": "MADHUSUDHANA RAO", "rollNumber": "22B21A4285", "branch": "CSM", "date": "2025-03-06", "time": "23:08:01", "status": "Present"}, {"name": "Lokesh", "rollNumber": "22B21A4296", "branch": "CSM", "date": "2025-03-06", "time": "23:08:01", "status": "Present"}, {"name": "reddy ", "rollNumber": "4293", "branch": "CSM", "date": "2025-03-06", "time": "23:08:01", "status": "Absent"}, {"name": "umesh", "rollNumber": "4295", "branch": "CSM", "date": "2025-03-06", "time": "23:08:01", "status": "Absent"}, {"name": "Surya Lokesh", "rollNumber": "22B21A4284", "branch": "CSM", "date": "2025-03-06", "time": "23:17:09", "status": "Present"}]
+[
+    {
+        "name": "vinod kumar",
+        "rollNumber": "22B21A4298",
+        "branch": "CSD",
+        "date": "2025-03-07",
+        "time": "09:42:38",
+        "status": "Present"
+    },
+    {
+        "name": "A. Surya",
+        "rollNumber": "22B21A42B3",
+        "branch": "CSD",
+        "date": "2025-03-07",
+        "time": "09:42:38",
+        "status": "Absent"
+    },
+    {
+        "name": "T. Mallesh",
+        "rollNumber": "22B21A4238",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "09:43:31",
+        "status": "Absent"
+    },
+    {
+        "name": "Surya Lokesh",
+        "rollNumber": "22B21A4284",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "09:43:31",
+        "status": "Absent"
+    },
+    {
+        "name": "MADHUSUDHANA RAO",
+        "rollNumber": "22B21A4285",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "09:43:31",
+        "status": "Present"
+    },
+    {
+        "name": "Lokesh",
+        "rollNumber": "22B21A4296",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "09:43:31",
+        "status": "Present"
+    },
+    {
+        "name": "s leela prasad",
+        "rollNumber": "22B21A42D8",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "09:43:31",
+        "status": "Absent"
+    },
+    {
+        "name": "samuyel",
+        "rollNumber": "56",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "09:43:31",
+        "status": "Absent"
+    },
+    {
+        "name": "T. Mallesh",
+        "rollNumber": "22B21A4238",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "12:32:01",
+        "status": "Present"
+    },
+    {
+        "name": "Surya Lokesh",
+        "rollNumber": "22B21A4284",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "12:32:01",
+        "status": "Absent"
+    },
+    {
+        "name": "MADHUSUDHANA RAO",
+        "rollNumber": "22B21A4285",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "12:32:01",
+        "status": "Present"
+    },
+    {
+        "name": "Lokesh",
+        "rollNumber": "22B21A4296",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "12:32:01",
+        "status": "Absent"
+    },
+    {
+        "name": "s leela prasad",
+        "rollNumber": "22B21A42D8",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "12:32:01",
+        "status": "Absent"
+    },
+    {
+        "name": "samuyel",
+        "rollNumber": "56",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "12:32:01",
+        "status": "Absent"
+    },
+    {
+        "name": "T. Mallesh",
+        "rollNumber": "22B21A4238",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "12:33:43",
+        "status": "Present"
+    },
+    {
+        "name": "Surya Lokesh",
+        "rollNumber": "22B21A4284",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "12:33:43",
+        "status": "Absent"
+    },
+    {
+        "name": "MADHUSUDHANA RAO",
+        "rollNumber": "22B21A4285",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "12:33:43",
+        "status": "Present"
+    },
+    {
+        "name": "Lokesh",
+        "rollNumber": "22B21A4296",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "12:33:43",
+        "status": "Absent"
+    },
+    {
+        "name": "s leela prasad",
+        "rollNumber": "22B21A42D8",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "12:33:43",
+        "status": "Absent"
+    },
+    {
+        "name": "samuyel",
+        "rollNumber": "56",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "12:33:43",
+        "status": "Absent"
+    },
+    {
+        "name": "Surya Lokesh",
+        "rollNumber": "22B21A4284",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "12:38:01",
+        "status": "Present"
+    },
+    {
+        "name": "T. Mallesh",
+        "rollNumber": "22B21A4238",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "12:40:28",
+        "status": "Present"
+    },
+    {
+        "name": "Surya Lokesh",
+        "rollNumber": "22B21A4284",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "12:40:28",
+        "status": "Present"
+    },
+    {
+        "name": "MADHUSUDHANA RAO",
+        "rollNumber": "22B21A4285",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "12:40:28",
+        "status": "Present"
+    },
+    {
+        "name": "Lokesh",
+        "rollNumber": "22B21A4296",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "12:40:28",
+        "status": "Absent"
+    },
+    {
+        "name": "s leela prasad",
+        "rollNumber": "22B21A42D8",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "12:40:28",
+        "status": "Absent"
+    },
+    {
+        "name": "samuyel",
+        "rollNumber": "56",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "12:40:28",
+        "status": "Absent"
+    },
+    {
+        "name": "T. Mallesh",
+        "rollNumber": "22B21A4238",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "13:04:43",
+        "status": "Present"
+    },
+    {
+        "name": "Surya Lokesh",
+        "rollNumber": "22B21A4284",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "13:04:43",
+        "status": "Absent"
+    },
+    {
+        "name": "MADHUSUDHANA RAO",
+        "rollNumber": "22B21A4285",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "13:04:43",
+        "status": "Absent"
+    },
+    {
+        "name": "Lokesh",
+        "rollNumber": "22B21A4296",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "13:04:43",
+        "status": "Absent"
+    },
+    {
+        "name": "s leela prasad",
+        "rollNumber": "22B21A42D8",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "13:04:43",
+        "status": "Absent"
+    },
+    {
+        "name": "samuyel",
+        "rollNumber": "56",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "13:04:43",
+        "status": "Absent"
+    },
+    {
+        "name": "prudhvi",
+        "rollNumber": "133",
+        "branch": "CSC",
+        "date": "2025-03-07",
+        "time": "14:31:28",
+        "status": "Present"
+    },
+    {
+        "name": "T. Mallesh",
+        "rollNumber": "22B21A4238",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "14:36:17",
+        "status": "Present"
+    },
+    {
+        "name": "Surya Lokesh",
+        "rollNumber": "22B21A4284",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "14:36:17",
+        "status": "Absent"
+    },
+    {
+        "name": "MADHUSUDHANA RAO",
+        "rollNumber": "22B21A4285",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "14:36:17",
+        "status": "Present"
+    },
+    {
+        "name": "Lokesh",
+        "rollNumber": "22B21A4296",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "14:36:17",
+        "status": "Absent"
+    },
+    {
+        "name": "s leela prasad",
+        "rollNumber": "22B21A42D8",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "14:36:17",
+        "status": "Absent"
+    },
+    {
+        "name": "samuyel",
+        "rollNumber": "56",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "14:36:17",
+        "status": "Absent"
+    },
+    {
+        "name": "T. Mallesh",
+        "rollNumber": "22B21A4238",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "14:52:39",
+        "status": "Absent"
+    },
+    {
+        "name": "Surya Lokesh",
+        "rollNumber": "22B21A4284",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "14:52:39",
+        "status": "Absent"
+    },
+    {
+        "name": "MADHUSUDHANA RAO",
+        "rollNumber": "22B21A4285",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "14:52:39",
+        "status": "Present"
+    },
+    {
+        "name": "Lokesh",
+        "rollNumber": "22B21A4296",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "14:52:39",
+        "status": "Absent"
+    },
+    {
+        "name": "s leela prasad",
+        "rollNumber": "22B21A42D8",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "14:52:39",
+        "status": "Absent"
+    },
+    {
+        "name": "samuyel",
+        "rollNumber": "56",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "14:52:39",
+        "status": "Absent"
+    },
+    {
+        "name": "T. Mallesh",
+        "rollNumber": "22B21A4238",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "14:55:39",
+        "status": "Present"
+    },
+    {
+        "name": "Surya Lokesh",
+        "rollNumber": "22B21A4284",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "14:55:39",
+        "status": "Absent"
+    },
+    {
+        "name": "MADHUSUDHANA RAO",
+        "rollNumber": "22B21A4285",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "14:55:39",
+        "status": "Present"
+    },
+    {
+        "name": "Lokesh",
+        "rollNumber": "22B21A4296",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "14:55:39",
+        "status": "Present"
+    },
+    {
+        "name": "s leela prasad",
+        "rollNumber": "22B21A42D8",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "14:55:39",
+        "status": "Absent"
+    },
+    {
+        "name": "samuyel",
+        "rollNumber": "56",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "14:55:39",
+        "status": "Absent"
+    },
+    {
+        "name": "T. Mallesh",
+        "rollNumber": "22B21A4238",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "14:57:01",
+        "status": "Absent"
+    },
+    {
+        "name": "Surya Lokesh",
+        "rollNumber": "22B21A4284",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "14:57:01",
+        "status": "Absent"
+    },
+    {
+        "name": "MADHUSUDHANA RAO",
+        "rollNumber": "22B21A4285",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "14:57:01",
+        "status": "Present"
+    },
+    {
+        "name": "Lokesh",
+        "rollNumber": "22B21A4296",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "14:57:01",
+        "status": "Present"
+    },
+    {
+        "name": "s leela prasad",
+        "rollNumber": "22B21A42D8",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "14:57:01",
+        "status": "Absent"
+    },
+    {
+        "name": "samuyel",
+        "rollNumber": "56",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "14:57:01",
+        "status": "Absent"
+    },
+    {
+        "name": "aparna mounika",
+        "rollNumber": "45b8",
+        "branch": "AID",
+        "date": "2025-03-07",
+        "time": "14:59:01",
+        "status": "Present"
+    },
+    {
+        "name": "Lokesh",
+        "rollNumber": "22B21A4296",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:02:50",
+        "status": "Present"
+    },
+    {
+        "name": "Lokesh",
+        "rollNumber": "22B21A4296",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:03:30",
+        "status": "Present"
+    },
+    {
+        "name": "T. Mallesh",
+        "rollNumber": "22B21A4238",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:16:52",
+        "status": "Present"
+    },
+    {
+        "name": "Surya Lokesh",
+        "rollNumber": "22B21A4284",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:16:52",
+        "status": "Absent"
+    },
+    {
+        "name": "MADHUSUDHANA RAO",
+        "rollNumber": "22B21A4285",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:16:52",
+        "status": "Present"
+    },
+    {
+        "name": "Lokesh",
+        "rollNumber": "22B21A4296",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:16:52",
+        "status": "Absent"
+    },
+    {
+        "name": "s leela prasad",
+        "rollNumber": "22B21A42D8",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:16:52",
+        "status": "Absent"
+    },
+    {
+        "name": "samuyel",
+        "rollNumber": "56",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:16:52",
+        "status": "Absent"
+    },
+    {
+        "name": "T. Mallesh",
+        "rollNumber": "22B21A4238",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:28:41",
+        "status": "Absent"
+    },
+    {
+        "name": "Surya Lokesh",
+        "rollNumber": "22B21A4284",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:28:41",
+        "status": "Present"
+    },
+    {
+        "name": "MADHUSUDHANA RAO",
+        "rollNumber": "22B21A4285",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:28:41",
+        "status": "Absent"
+    },
+    {
+        "name": "Lokesh",
+        "rollNumber": "22B21A4296",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:28:41",
+        "status": "Absent"
+    },
+    {
+        "name": "s leela prasad",
+        "rollNumber": "22B21A42D8",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:28:41",
+        "status": "Absent"
+    },
+    {
+        "name": "samuyel",
+        "rollNumber": "56",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:28:41",
+        "status": "Absent"
+    },
+    {
+        "name": "Surya Lokesh",
+        "rollNumber": "22B21A4284",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:29:13",
+        "status": "Present"
+    },
+    {
+        "name": "T. Mallesh",
+        "rollNumber": "22B21A4238",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:32:08",
+        "status": "Absent"
+    },
+    {
+        "name": "Surya Lokesh",
+        "rollNumber": "22B21A4284",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:32:08",
+        "status": "Absent"
+    },
+    {
+        "name": "MADHUSUDHANA RAO",
+        "rollNumber": "22B21A4285",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:32:08",
+        "status": "Present"
+    },
+    {
+        "name": "Lokesh",
+        "rollNumber": "22B21A4296",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:32:08",
+        "status": "Absent"
+    },
+    {
+        "name": "s leela prasad",
+        "rollNumber": "22B21A42D8",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:32:08",
+        "status": "Present"
+    },
+    {
+        "name": "samuyel",
+        "rollNumber": "56",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:32:08",
+        "status": "Present"
+    },
+    {
+        "name": "Lokesh",
+        "rollNumber": "22B21A4296",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:34:16",
+        "status": "Present"
+    },
+    {
+        "name": "T. Mallesh",
+        "rollNumber": "22B21A4238",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:39:09",
+        "status": "Present"
+    },
+    {
+        "name": "Surya Lokesh",
+        "rollNumber": "22B21A4284",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:39:09",
+        "status": "Absent"
+    },
+    {
+        "name": "MADHUSUDHANA RAO",
+        "rollNumber": "22B21A4285",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:39:09",
+        "status": "Absent"
+    },
+    {
+        "name": "Lokesh",
+        "rollNumber": "22B21A4296",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:39:09",
+        "status": "Absent"
+    },
+    {
+        "name": "s leela prasad",
+        "rollNumber": "22B21A42D8",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:39:09",
+        "status": "Absent"
+    },
+    {
+        "name": "samuyel",
+        "rollNumber": "56",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:39:09",
+        "status": "Absent"
+    },
+    {
+        "name": "T. Mallesh",
+        "rollNumber": "22B21A4238",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:40:30",
+        "status": "Present"
+    },
+    {
+        "name": "Surya Lokesh",
+        "rollNumber": "22B21A4284",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:40:30",
+        "status": "Absent"
+    },
+    {
+        "name": "MADHUSUDHANA RAO",
+        "rollNumber": "22B21A4285",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:40:30",
+        "status": "Absent"
+    },
+    {
+        "name": "Lokesh",
+        "rollNumber": "22B21A4296",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:40:30",
+        "status": "Present"
+    },
+    {
+        "name": "s leela prasad",
+        "rollNumber": "22B21A42D8",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:40:30",
+        "status": "Absent"
+    },
+    {
+        "name": "samuyel",
+        "rollNumber": "56",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:40:30",
+        "status": "Absent"
+    },
+    {
+        "name": "b.harsha ragini",
+        "rollNumber": "24B21A42A2",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:45:53",
+        "status": "Present"
+    },
+    {
+        "name": "T. Mallesh",
+        "rollNumber": "22B21A4238",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:46:35",
+        "status": "Absent"
+    },
+    {
+        "name": "Surya Lokesh",
+        "rollNumber": "22B21A4284",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:46:35",
+        "status": "Absent"
+    },
+    {
+        "name": "MADHUSUDHANA RAO",
+        "rollNumber": "22B21A4285",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:46:35",
+        "status": "Present"
+    },
+    {
+        "name": "Lokesh",
+        "rollNumber": "22B21A4296",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:46:35",
+        "status": "Present"
+    },
+    {
+        "name": "s leela prasad",
+        "rollNumber": "22B21A42D8",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:46:35",
+        "status": "Absent"
+    },
+    {
+        "name": "b.harsha ragini",
+        "rollNumber": "24B21A42A2",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:46:35",
+        "status": "Absent"
+    },
+    {
+        "name": "samuyel",
+        "rollNumber": "56",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:46:35",
+        "status": "Absent"
+    },
+    {
+        "name": "T. Mallesh",
+        "rollNumber": "22B21A4238",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:48:03",
+        "status": "Absent"
+    },
+    {
+        "name": "Surya Lokesh",
+        "rollNumber": "22B21A4284",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:48:03",
+        "status": "Absent"
+    },
+    {
+        "name": "MADHUSUDHANA RAO",
+        "rollNumber": "22B21A4285",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:48:03",
+        "status": "Absent"
+    },
+    {
+        "name": "Lokesh",
+        "rollNumber": "22B21A4296",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:48:03",
+        "status": "Present"
+    },
+    {
+        "name": "s leela prasad",
+        "rollNumber": "22B21A42D8",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:48:03",
+        "status": "Absent"
+    },
+    {
+        "name": "b.harsha ragini",
+        "rollNumber": "24B21A42A2",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:48:03",
+        "status": "Absent"
+    },
+    {
+        "name": "samuyel",
+        "rollNumber": "56",
+        "branch": "CSM",
+        "date": "2025-03-07",
+        "time": "15:48:03",
+        "status": "Absent"
+    }
+]
