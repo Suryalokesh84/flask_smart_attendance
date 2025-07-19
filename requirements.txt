@@ -1,0 +1,7 @@
+flask
+face_recognition
+mediapipe
+opencv-python
+numpy
+scipy
+

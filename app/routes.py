@@ -201,3 +201,34 @@ from .attendance import get_all_users
 def admin_students():
     students = get_all_users()
     return render_template('students.html', students=students)
+
+
+from flask import Response, render_template
+import cv2
+
+# Initialize camera
+cap = cv2.VideoCapture(0)
+
+def generate_frames():
+    """Generator function to stream live video frames."""
+    while True:
+        success, frame = cap.read()
+        if not success:
+            break
+        else:
+            # Encode frame as JPEG
+            ret, buffer = cv2.imencode('.jpg', frame)
+            frame = buffer.tobytes()
+        
+        # Yield frame to be displayed in HTML
+        yield (b'--frame\r\n'
+               b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+
+@main.route('/video_stream')
+def video_stream():
+    return Response(gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
+
+@main.route('/live_preview')
+def live_preview():
+    """Render the page that shows live video."""
+    return render_template('video_feed.html')
