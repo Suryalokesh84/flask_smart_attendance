@@ -1,6 +1,6 @@
 flask
 face_recognition
-mediapipe==0.10.21
+mediapipe
 
 opencv-python
 numpy
