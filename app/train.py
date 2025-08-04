@@ -1,13 +1,19 @@
 import cv2
-import mediapipe as mp
 import face_recognition
 import numpy as np
 import os
 import time
 import json
 
-mp_face_detection = mp.solutions.face_detection
-mp_drawing = mp.solutions.drawing_utils
+# Try to import mediapipe, but handle the case where it's not available
+try:
+    import mediapipe as mp
+    MEDIAPIPE_AVAILABLE = True
+    mp_face_detection = mp.solutions.face_detection
+    mp_drawing = mp.solutions.drawing_utils
+except ImportError:
+    MEDIAPIPE_AVAILABLE = False
+    print("Warning: MediaPipe not available. Face detection will be limited.")
 
 if not os.path.exists('trained_images'):
     os.makedirs('trained_images')
@@ -15,6 +21,13 @@ if not os.path.exists('user_data'):
     os.makedirs('user_data')
 
 def detect_faces(frame):
+    if not MEDIAPIPE_AVAILABLE:
+        # Fallback to OpenCV face detection
+        face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        faces = face_cascade.detectMultiScale(gray, 1.1, 4)
+        return len(faces) > 0
+    
     with mp_face_detection.FaceDetection(model_selection=1, min_detection_confidence=0.5) as face_detection:
         results = face_detection.process(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
         if results.detections:

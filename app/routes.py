@@ -1,6 +1,5 @@
 from flask import Blueprint, render_template, request, redirect, url_for, flash, Response
 import cv2
-import mediapipe as mp
 import face_recognition
 import numpy as np
 import json
@@ -8,12 +7,19 @@ import os
 from datetime import datetime, timedelta
 from scipy.spatial import distance as dist
 
+# Try to import mediapipe, but handle the case where it's not available
+try:
+    import mediapipe as mp
+    MEDIAPIPE_AVAILABLE = True
+    mp_face_mesh = mp.solutions.face_mesh
+except ImportError:
+    MEDIAPIPE_AVAILABLE = False
+    print("Warning: MediaPipe not available. Some features may be limited.")
+
 from .attendance import load_user_data, preload_encodings, save_attendance_record
 from .train import process_frame, save_images
 
 main = Blueprint('main', __name__)
-
-mp_face_mesh = mp.solutions.face_mesh
 
 def eye_aspect_ratio(eye):
     A = dist.euclidean(eye[1], eye[5])
@@ -23,6 +29,9 @@ def eye_aspect_ratio(eye):
     return ear
 
 def detect_blink(face_landmarks, img_width, img_height):
+    if not MEDIAPIPE_AVAILABLE:
+        return False  # Fallback when MediaPipe is not available
+    
     left_eye_landmarks = [33, 160, 158, 133, 153, 144]
     right_eye_landmarks = [362, 385, 387, 263, 373, 380]
     left_eye = [(face_landmarks.landmark[i].x * img_width, face_landmarks.landmark[i].y * img_height) for i in left_eye_landmarks]
@@ -39,6 +48,15 @@ def detect_blink(face_landmarks, img_width, img_height):
 @main.route('/')
 def index():
     return render_template('index.html')
+
+@main.route('/health')
+def health_check():
+    """Health check endpoint for deployment monitoring"""
+    return {
+        'status': 'healthy',
+        'mediapipe_available': MEDIAPIPE_AVAILABLE,
+        'timestamp': datetime.now().isoformat()
+    }
 
 @main.route('/register', methods=['GET', 'POST'])
 def register():
@@ -81,6 +99,10 @@ def register():
 @main.route('/capture-attendance', methods=['GET'])
 def capture_attendance():
     """ Capture attendance using face recognition and blink detection """
+    if not MEDIAPIPE_AVAILABLE:
+        flash("MediaPipe is not available in this environment. Please contact administrator.")
+        return redirect(url_for('main.index'))
+    
     user_data = load_user_data()
     known_face_encodings, known_face_names, known_face_roll_numbers, known_face_branches = preload_encodings(user_data)
     
@@ -201,3 +223,34 @@ from .attendance import get_all_users
 def admin_students():
     students = get_all_users()
     return render_template('students.html', students=students)
+
+
+from flask import Response, render_template
+import cv2
+
+# Initialize camera
+cap = cv2.VideoCapture(0)
+
+def generate_frames():
+    """Generator function to stream live video frames."""
+    while True:
+        success, frame = cap.read()
+        if not success:
+            break
+        else:
+            # Encode frame as JPEG
+            ret, buffer = cv2.imencode('.jpg', frame)
+            frame = buffer.tobytes()
+        
+        # Yield frame to be displayed in HTML
+        yield (b'--frame\r\n'
+               b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+
+@main.route('/video_stream')
+def video_stream():
+    return Response(gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
+
+@main.route('/live_preview')
+def live_preview():
+    """Render the page that shows live video."""
+    return render_template('video_feed.html')
