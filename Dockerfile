@@ -1,7 +1,8 @@
 FROM python:3.9-slim
 
 # Install system dependencies required for MediaPipe and OpenCV
-RUN apt-get update && apt-get install -y \
+# Break down the installation to avoid timeout issues
+RUN apt-get update && apt-get install -y --no-install-recommends \
     libgl1-mesa-glx \
     libglib2.0-0 \
     libsm6 \
@@ -10,15 +11,27 @@ RUN apt-get update && apt-get install -y \
     libgomp1 \
     libgthread-2.0-0 \
     libgtk-3-0 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install additional dependencies in separate layer
+RUN apt-get update && apt-get install -y --no-install-recommends \
     libavcodec-dev \
     libavformat-dev \
     libswscale-dev \
     libv4l-dev \
     libxvidcore-dev \
     libx264-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install image processing libraries
+RUN apt-get update && apt-get install -y --no-install-recommends \
     libjpeg-dev \
     libpng-dev \
     libtiff-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install scientific computing libraries
+RUN apt-get update && apt-get install -y --no-install-recommends \
     libatlas-base-dev \
     gfortran \
     wget \
