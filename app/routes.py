@@ -1,19 +1,17 @@
 from flask import Blueprint, render_template, request, redirect, url_for, flash, Response
 import cv2
-import mediapipe as mp
 import face_recognition
 import numpy as np
 import json
 import os
 from datetime import datetime, timedelta
 from scipy.spatial import distance as dist
+import dlib
 
 from .attendance import load_user_data, preload_encodings, save_attendance_record
 from .train import process_frame, save_images
 
 main = Blueprint('main', __name__)
-
-mp_face_mesh = mp.solutions.face_mesh
 
 def eye_aspect_ratio(eye):
     A = dist.euclidean(eye[1], eye[5])
@@ -22,19 +20,18 @@ def eye_aspect_ratio(eye):
     ear = (A + B) / (2.0 * C)
     return ear
 
-def detect_blink(face_landmarks, img_width, img_height):
-    left_eye_landmarks = [33, 160, 158, 133, 153, 144]
-    right_eye_landmarks = [362, 385, 387, 263, 373, 380]
-    left_eye = [(face_landmarks.landmark[i].x * img_width, face_landmarks.landmark[i].y * img_height) for i in left_eye_landmarks]
-    right_eye = [(face_landmarks.landmark[i].x * img_width, face_landmarks.landmark[i].y * img_height) for i in right_eye_landmarks]
-    
+def get_eye_landmarks(shape, eye_indices):
+    return [(shape.part(i).x, shape.part(i).y) for i in eye_indices]
+
+def detect_blink_dlib(shape):
+    left_eye_indices = [36, 37, 38, 39, 40, 41]
+    right_eye_indices = [42, 43, 44, 45, 46, 47]
+    left_eye = get_eye_landmarks(shape, left_eye_indices)
+    right_eye = get_eye_landmarks(shape, right_eye_indices)
     left_ear = eye_aspect_ratio(left_eye)
     right_ear = eye_aspect_ratio(right_eye)
-
     EAR_THRESHOLD = 0.21
-    if left_ear < EAR_THRESHOLD and right_ear < EAR_THRESHOLD:
-        return True
-    return False
+    return left_ear < EAR_THRESHOLD and right_ear < EAR_THRESHOLD
 
 @main.route('/')
 def index():
@@ -93,47 +90,42 @@ def capture_attendance():
     blink_count = 0
     last_blink_time = datetime.now()
 
-    with mp_face_mesh.FaceMesh(max_num_faces=1, refine_landmarks=True, min_detection_confidence=0.5) as face_mesh:
-        while cap.isOpened() and not attendance_recorded:
-            ret, frame = cap.read()
-            if not ret:
-                break
+    detector = dlib.get_frontal_face_detector()
+    predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
+    # You must download this file and place it in your project directory
 
-            img_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-            results = face_mesh.process(img_rgb)
-            
-            if results.multi_face_landmarks:
-                face_landmarks = results.multi_face_landmarks[0]
-                img_height, img_width, _ = frame.shape
-
-                if detect_blink(face_landmarks, img_width, img_height):
-                    current_time = datetime.now()
-                    if (current_time - last_blink_time) >= timedelta(seconds=0.5):
-                        blink_count += 1
-                        last_blink_time = current_time
-                        print(f"Blink detected! Blink count: {blink_count}")
-
-                if blink_count >= 4:
-                    face_locations = face_recognition.face_locations(frame)
-                    face_encodings = face_recognition.face_encodings(frame, face_locations)
-
-                    for (top, right, bottom, left), face_encoding in zip(face_locations, face_encodings):
-                        matches = face_recognition.compare_faces(known_face_encodings, face_encoding, tolerance=0.4)
-                        face_distances = face_recognition.face_distance(known_face_encodings, face_encoding)
-                        best_match_index = np.argmin(face_distances)
-                        if matches[best_match_index]:
-                            name = known_face_names[best_match_index]
-                            roll_number = known_face_roll_numbers[best_match_index]
-                            branch = known_face_branches[best_match_index]
-                            email = user_data[roll_number]['email']  # Get user's email from JSON
-                            attendance_recorded = True
-                            save_attendance_record(name, roll_number, branch, email)
-                            flash(f"✅ Attendance recorded for {name} ({branch}) and email sent successfully!")
-                            break
-        
-            if attendance_recorded:
-                break
-
+    while cap.isOpened() and not attendance_recorded:
+        ret, frame = cap.read()
+        if not ret:
+            break
+        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        faces = detector(gray)
+        for face in faces:
+            shape = predictor(gray, face)
+            if detect_blink_dlib(shape):
+                current_time = datetime.now()
+                if (current_time - last_blink_time) >= timedelta(seconds=0.5):
+                    blink_count += 1
+                    last_blink_time = current_time
+                    print(f"Blink detected! Blink count: {blink_count}")
+            if blink_count >= 4:
+                face_locations = face_recognition.face_locations(frame)
+                face_encodings = face_recognition.face_encodings(frame, face_locations)
+                for (top, right, bottom, left), face_encoding in zip(face_locations, face_encodings):
+                    matches = face_recognition.compare_faces(known_face_encodings, face_encoding, tolerance=0.4)
+                    face_distances = face_recognition.face_distance(known_face_encodings, face_encoding)
+                    best_match_index = np.argmin(face_distances)
+                    if matches[best_match_index]:
+                        name = known_face_names[best_match_index]
+                        roll_number = known_face_roll_numbers[best_match_index]
+                        branch = known_face_branches[best_match_index]
+                        email = user_data[roll_number]['email']
+                        attendance_recorded = True
+                        save_attendance_record(name, roll_number, branch, email)
+                        flash(f"✅ Attendance recorded for {name} ({branch}) and email sent successfully!")
+                        break
+        if attendance_recorded:
+            break
     cap.release()
     return redirect(url_for('main.index'))
 
@@ -201,3 +193,34 @@ from .attendance import get_all_users
 def admin_students():
     students = get_all_users()
     return render_template('students.html', students=students)
+
+
+from flask import Response, render_template
+import cv2
+
+# Initialize camera
+cap = cv2.VideoCapture(0)
+
+def generate_frames():
+    """Generator function to stream live video frames."""
+    while True:
+        success, frame = cap.read()
+        if not success:
+            break
+        else:
+            # Encode frame as JPEG
+            ret, buffer = cv2.imencode('.jpg', frame)
+            frame = buffer.tobytes()
+        
+        # Yield frame to be displayed in HTML
+        yield (b'--frame\r\n'
+               b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+
+@main.route('/video_stream')
+def video_stream():
+    return Response(gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
+
+@main.route('/live_preview')
+def live_preview():
+    """Render the page that shows live video."""
+    return render_template('video_feed.html')

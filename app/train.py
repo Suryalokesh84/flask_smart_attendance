@@ -1,13 +1,10 @@
 import cv2
-import mediapipe as mp
 import face_recognition
 import numpy as np
 import os
 import time
 import json
-
-mp_face_detection = mp.solutions.face_detection
-mp_drawing = mp.solutions.drawing_utils
+import dlib
 
 if not os.path.exists('trained_images'):
     os.makedirs('trained_images')
@@ -15,11 +12,10 @@ if not os.path.exists('user_data'):
     os.makedirs('user_data')
 
 def detect_faces(frame):
-    with mp_face_detection.FaceDetection(model_selection=1, min_detection_confidence=0.5) as face_detection:
-        results = face_detection.process(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
-        if results.detections:
-            return results.detections
-        return []
+    detector = dlib.get_frontal_face_detector()
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    faces = detector(gray)
+    return faces
 
 def process_frame(frame, face_encodings):
     small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)  # Speed up encoding
